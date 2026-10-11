@@ -8,8 +8,8 @@ Record these values with every released weight artifact:
 - UNI model ID and exact revision or download hash;
 - Stage 1 fusion checkpoint and Stage 2 LoRA checkpoint;
 - annotation and image-manifest SHA256 values;
-- Python, PyTorch, Transformers, PEFT, timm, flash-linear-attention, and CUDA versions;
-- GPU type/count, global batch size, gradient accumulation, seed, learning rate, precision, and checkpoint-selection rule;
+- Python, PyTorch, Transformers, PEFT, timm, and flash-linear-attention versions;
+- distributed device count, global batch size, gradient accumulation, seed, learning rate, precision, and checkpoint-selection rule;
 - processor, tokenizer, chat template, image resize/normalization, and generation settings.
 
 The release scripts deliberately require paths through arguments or environment variables. They do not assume the author's directory layout. The smoke scripts use only a few samples and two optimizer steps; they verify imports, data loading, and the forward/backward path but are not a quality test.

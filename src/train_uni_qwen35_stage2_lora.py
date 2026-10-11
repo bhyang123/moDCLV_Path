@@ -131,7 +131,7 @@ def fused_loss(
     shift_labels = labels[:, 1:].contiguous()
     # Project only answer positions.  Materializing vocabulary logits for the
     # image and prompt positions wastes several GiB and caused batch-size 4 to
-    # OOM during LoRA backward on H200.  Boolean indexing preserves the
+    # OOM during LoRA backward at larger batch sizes. Boolean indexing preserves the
     # language-model gradient while keeping the logits tensor small.
     shift_hidden = outputs.last_hidden_state[:, :-1, :]
     answer_mask = shift_labels != -100

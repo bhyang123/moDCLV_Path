@@ -29,7 +29,7 @@ The source images and annotation files are not redistributed here. Users must ob
 
 ## Training procedure
 
-The reported jobs used two NVIDIA H200 GPUs. Stage 1 selected the 30,000-step fusion checkpoint for the Stage 2 run. Stage 2 ran one epoch with global batch size 16, learning rate 2e-5, LoRA rank 16, alpha 32, dropout 0.05, and seed 3407. The final Stage 2 checkpoint was step 6626.
+The reported jobs used distributed training. Stage 1 selected the 30,000-step fusion checkpoint for the Stage 2 run. Stage 2 ran one epoch with global batch size 16, learning rate 2e-5, LoRA rank 16, alpha 32, dropout 0.05, and seed 3407. The final Stage 2 checkpoint was step 6626.
 
 The exact commands and path variables are in `scripts/`, and the implementation is in `src/`. Record the exact Qwen and UNI revisions when publishing a weight artifact; the local training run used downloaded copies and did not preserve a public revision field.
 

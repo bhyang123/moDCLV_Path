@@ -34,7 +34,7 @@ Do not commit the QUILT images or annotations, UNI weights, Qwen weights, access
 
 ## Environment
 
-The reported run used two NVIDIA H200 GPUs, PyTorch 2.14.0+cu130, Transformers 5.8.0, PEFT 0.18.1, timm 1.0.15, flash-linear-attention 0.5.2, and einops 0.8.1. Install a CUDA-compatible PyTorch build first, then install the remaining dependencies:
+The reported run used PyTorch 2.14.0, Transformers 5.8.0, PEFT 0.18.1, timm 1.0.15, flash-linear-attention 0.5.2, and einops 0.8.1. Install a PyTorch build compatible with your compute environment first, then install the remaining dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -79,11 +79,11 @@ Run the smoke tests before a full job:
 ./scripts/smoke_stage2.sh
 ```
 
-For the reported two-GPU configuration:
+For a distributed training configuration:
 
 ```bash
-./scripts/train_stage1_2xh200.sh
-./scripts/train_stage2_lora_2xh200.sh
+./scripts/train_stage1.sh
+./scripts/train_stage2_lora.sh
 ```
 
 The scripts accept `RUN_DIR`, `PYTHON`, `NPROC_PER_NODE`, and the hyperparameter environment variables documented in the script files. Use `FUSION_CHECKPOINT` to point Stage 2 to either the original resumable `.pt` checkpoint or an adapter-only `.safetensors` export.
