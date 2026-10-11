@@ -1,0 +1,10 @@
+# Install a CUDA-compatible PyTorch and torchvision build first.
+# The versions below match the environment used for the reported runs.
+transformers==5.8.0
+peft==0.18.1
+timm==1.0.15
+flash-linear-attention==0.5.2
+einops==0.8.1
+safetensors>=0.4.3
+Pillow>=10.0
+numpy>=1.26

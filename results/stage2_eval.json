@@ -1,0 +1,7 @@
+{
+  "evaluation": "answer-token weighted validation causal NLL",
+  "checkpoint_step": 6626,
+  "records": 512,
+  "answer_tokens": 93022,
+  "answer_nll": 0.8340887380695607
+}

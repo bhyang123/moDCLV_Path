@@ -1,0 +1,10 @@
+{
+  "format": "moDCLV_Path UNIFusionAdapter",
+  "uni_dim": 1024,
+  "qwen_dim": 4096,
+  "adapter_dim": 1024,
+  "num_heads": 16,
+  "max_uni_tokens": 197,
+  "selected_source_step": 30000,
+  "binary_included": false
+}

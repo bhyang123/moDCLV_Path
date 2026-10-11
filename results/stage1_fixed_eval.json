@@ -1,0 +1,27 @@
+{
+  "evaluation": "answer-token weighted causal NLL",
+  "records": 512,
+  "answer_tokens": 17351,
+  "candidates": {
+    "native_qwen_visual": {
+      "answer_nll": 2.462954072400985,
+      "answer_ppl": 11.739439010620117
+    },
+    "stage1_step_5000": {
+      "answer_nll": 1.7862400540590464,
+      "answer_ppl": 5.966975212097168
+    },
+    "stage1_step_30000": {
+      "answer_nll": 1.7704346000368427,
+      "answer_ppl": 5.873405456542969
+    },
+    "stage1_final": {
+      "answer_nll": 1.7708435643407001,
+      "answer_ppl": 5.875807762145996
+    },
+    "stage1_final_shuffled_uni": {
+      "answer_nll": 1.780948871302334,
+      "answer_ppl": 5.93548583984375
+    }
+  }
+}

@@ -1,0 +1,35 @@
+# Local environments and secrets
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
+
+# Training and evaluation outputs
+runs/
+outputs/
+logs/
+results/*.log
+results/*.jsonl
+
+# Restricted data and downloaded base models
+data/
+models/
+cache/
+
+# Large model/checkpoint files
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.h5
+*.hdf5
+
+# Python and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
